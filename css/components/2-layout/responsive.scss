@@ -1,0 +1,309 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  h1 {
+    &.ex {
+      font-size: 90px;
+    }
+  }
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    &.ex {
+      font-size: 80px;
+    }
+  }
+  @include hero-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  h1 {
+    &.ex {
+      font-size: 70px;
+    }
+  }
+  h3 {
+    &.sm {
+      font-size: 35px;
+    }
+  }
+  @include hero-xlg-xxlg-extra;
+  @include dash-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  h1 {
+    font-size: 40px;
+    &.ex {
+      font-size: 55px;
+    }
+  }
+  h2 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  p {
+    &.big {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  .countdown {
+    font-size: 30px;
+  }
+  .range {
+    &__number {
+      margin-bottom: 60px;
+      font-size: 100px;
+    }
+  }
+  #range-slider__range::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+  }
+  @include hero-xlg-xxlg;
+  @include price-xlg-xxlg;
+  @include info-xlg-xxlg;
+  @include faq-xlg-xxlg;
+  @include stats-xlg-xxlg;
+  @include amount-xlg-xxlg;
+
+  @include offer-xlg-xxlg;
+  // home page
+  @include intro-xlg-xxlg;
+  @include about-xlg-xxlg;
+  @include work-xlg-xxlg;
+  @include contact-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 35px;
+    &.ex {
+      font-size: 45px;
+    }
+  }
+  h2 {
+    font-size: 55px;
+  }
+  h3 {
+    font-size: 35px;
+    &.sm {
+      font-size: 30px;
+    }
+  }
+  .main {
+    &.big {
+      padding-top: 75px;
+    }
+    &.ex {
+      padding-top: 75px;
+    }
+  }
+  .table {
+    padding-bottom: 15px;
+    min-width: 430px;
+    &__wrapper {
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: block;
+        height: 14px;
+        &-track {
+          background: #e4e4e4;
+        }
+        &-thumb {
+          background: #afafaf;
+          border-radius: 0;
+          &:hover {
+            background: #898888;
+          }
+        }
+      }
+    }
+    tr {
+      th,
+      td {
+        padding: 15px;
+      }
+      th {
+        padding: 13px 15px;
+      }
+    }
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+  @include sign-lg-xlg;
+  @include footer-lg-xlg;
+
+  @include dash-lg-xlg;
+  @include offer-lg-xlg;
+
+  // home page
+  @include intro-lg-xlg;
+
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 30px;
+    &.ex {
+      font-size: 40px;
+    }
+  }
+  h2 {
+    font-size: 50px;
+  }
+  p {
+    &.big {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  @include hero-md-lg;
+  @include dash-md-lg;
+
+  @include offer-md-lg;
+
+  // home page
+  @include about-md-lg;
+  @include work-md-lg;
+  @include contact-md-lg;
+  @include footer-md-lg;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 25px;
+  }
+  h1 {
+    font-size: 25px;
+    &.ex {
+      font-size: 45px;
+      line-height: 55px;
+    }
+  }
+  h2 {
+    font-size: 45px;
+  }
+  h3 {
+    font-size: 28px;
+    &.sm {
+      font-size: 24px;
+    }
+  }
+  h4 {
+    font-size: 25px;
+  }
+  p {
+    &.big {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+  .countdown {
+    font-size: 25px;
+    min-height: 25px;
+    strong {
+      margin: 0 5px;
+    }
+  }
+  .range {
+    &__number {
+      margin-bottom: 60px;
+      font-size: 80px;
+      sup {
+        font-size: 14px;
+      }
+    }
+  }
+  #range-slider__range::-webkit-slider-thumb {
+    width: 35px;
+    height: 35px;
+  }
+  @include hero-sm-md;
+  @include price-sm-md;
+  @include info-sm-md;
+  @include faq-sm-md;
+  @include stats-sm-md;
+  @include amount-sm-md;
+
+  @include sign-sm-md;
+  @include dash-sm-md;
+  // homepage
+  @include intro-sm-md;
+  @include contact-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  h1 {
+    font-size: 20px;
+  }
+
+  @include hero-sm-md-extra;
+  @include footer-sm-md-extra;
+
+  @include sign-sm-md-extra;
+  // home page
+  @include about-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+
+  .countdown {
+    font-size: 16px;
+  }
+  .main {
+    &.big {
+      padding-top: 70px;
+    }
+    &.ex {
+      padding-top: 70px;
+    }
+  }
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include hero-xsm-sm;
+  @include price-xsm-sm;
+  @include faq-xsm-sm;
+  @include stats-xsm-sm;
+  @include footer-xsm-sm;
+
+  @include dash-xsm-sm;
+  @include offer-xsm-sm;
+  // homepage
+  @include intro-xsm-sm;
+  @include work-xsm-sm;
+  @include contact-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include hero-xxxsm-xxsm;
+}

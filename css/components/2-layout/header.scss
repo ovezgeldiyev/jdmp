@@ -1,0 +1,345 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  &.big {
+    .auto__container {
+      max-width: 1400px;
+    }
+  }
+  &.active {
+    background-color: $white;
+    .header__inner {
+      padding: 20px 0;
+      &-arrow {
+        background-color: #f0fbf7;
+      }
+      .user {
+        background-color: #f0fbf7;
+      }
+      .burger {
+        background-color: #f0fbf7;
+      }
+    }
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: 0.4s;
+    box-shadow: 0px 4px 4px 0px #00000021;
+    background-color: $white;
+    .header__inner {
+      padding: 20px 0;
+      &-arrow {
+        background-color: #f0fbf7;
+      }
+      .user {
+        background-color: #f0fbf7;
+      }
+      .burger {
+        background-color: #f0fbf7;
+      }
+    }
+  }
+  &__inner {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    position: relative;
+    &-arrow {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $white;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &:hover {
+        opacity: 1;
+        svg {
+          color: $primary;
+        }
+      }
+      svg {
+        width: 50%;
+        height: 35%;
+        color: $black;
+        transition: 0.3s ease;
+      }
+    }
+
+    &-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 270px;
+      img {
+        width: 100%;
+      }
+    }
+    &-buttons {
+      display: flex;
+      align-items: center;
+      .burger {
+        margin-left: 26px;
+      }
+    }
+  }
+}
+.header2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .auto__container {
+    max-width: 1720px;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-name: sticky;
+    animation-duration: 0.4s;
+    box-shadow: 0px 4px 4px 0px #00000021;
+    background-color: $white;
+    .header__inner {
+      padding: 20px 0;
+      &-arrow {
+        background-color: #f0fbf7;
+      }
+      .user {
+        background-color: #f0fbf7;
+      }
+      .burger {
+        background-color: #f0fbf7;
+      }
+    }
+  }
+  &__inner {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    position: relative;
+    padding: 20px 0;
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 235px;
+      img {
+        width: 100%;
+      }
+    }
+    &-side {
+      display: flex;
+      align-items: center;
+    }
+    .burger {
+      display: none;
+      background-color: #f0fbf7;
+
+    }
+    .user {
+      margin: 0 0 0 55px;
+      background-color: #f0fbf7;
+
+    }
+  }
+}
+.burger {
+  display: block;
+  cursor: pointer;
+  @include transition;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:hover {
+    .burger__inner {
+      &::before {
+        background-color: $primary;
+      }
+      &::after {
+        background-color: $primary;
+      }
+      span {
+        background-color: $primary;
+      }
+    }
+  }
+  &__inner {
+    width: 22px;
+    height: 18px;
+    position: relative;
+    &::before {
+      top: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      transition: all 0.3s ease;
+      content: "";
+      position: absolute;
+      left: 0;
+      border-radius: 3px;
+    }
+    span {
+      top: 50%;
+      width: 60%;
+      height: 2px;
+      background-color: $black;
+      transition: all 0.3s ease;
+      position: absolute;
+      left: 0;
+      border-radius: 3px;
+      @include transition;
+    }
+    &::after {
+      bottom: 0;
+      width: 37%;
+      height: 2px;
+      background-color: $black;
+      transition: all 0.3s ease;
+      content: "";
+      position: absolute;
+      left: 0;
+      border-radius: 3px;
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.active {
+    .burger__inner {
+      &::before {
+        width: 100%;
+
+        top: 50%;
+        transform: translate(0, -50%) rotate(45deg);
+      }
+      span {
+        opacity: 0;
+      }
+      &::after {
+        width: 100%;
+        bottom: 50%;
+        transform: translate(0, 50%) rotate(-45deg);
+      }
+    }
+  }
+}
+// 1024px
+@mixin header-lg-xlg {
+  .header {
+    &__inner {
+      padding: 30px 0;
+      &-logo {
+        width: 200px;
+      }
+      &-arrow {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  .header2 {
+    &.active {
+      background-color: $white;
+    }
+    &__inner {
+      &-logo {
+        width: 200px;
+      }
+      .burger {
+        display: flex;
+        margin: 0;
+      }
+      .user {
+        margin: 0;
+      }
+    }
+  }
+  .user {
+    width: 35px;
+    height: 35px;
+  }
+  .burger {
+    width: 35px;
+    height: 35px;
+    margin-left: 14px;
+    &__inner {
+      width: 18px;
+      height: 14px;
+    }
+  }
+}
+// 540px
+@mixin header-xsm-sm {
+  .header {
+    &.sticky {
+      .header__inner {
+        padding: 15px 0;
+      }
+    }
+    &__inner {
+      padding: 25px 0;
+      &-logo {
+        width: 160px;
+      }
+      &-arrow {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .user {
+    width: 30px;
+    height: 30px;
+  }
+  .burger {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    &__inner {
+      width: 16px;
+      height: 12px;
+    }
+  }
+}
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

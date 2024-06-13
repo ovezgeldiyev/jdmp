@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <!-- header start
+    =========================================== -->
+    <header class="header active" id="header">
+        <div class="auto__container">
+            <div class="header__inner">
+                <a href="#" class="header__inner-arrow hidden">
+                    <svg>
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__inner-logo">
+                    <img src="./images/logo.svg" alt="" />
+                </a>
+                <div class="header__inner-buttons">
+                    <div class="burger active" id="menuBtn">
+                        <div class="burger__inner">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav" id="menu">
+                    <div class="nav__inner">
+                        <div class="nav__inner-close">
+
+                        </div>
+                        <div class="nav__inner-col">
+                            <a href="#">
+                                A propos
+                            </a>
+                            <a href="#">
+                                Contact
+                            </a>
+                            <a href="#">
+                                Politique de confidentialité
+                            </a>
+                            <a href="#">
+                                Conditions générales
+                            </a>
+                        </div>
+                        <div class="nav__inner-col">
+                            <h6>
+                                VENDEURS
+                            </h6>
+                            <a href="#">
+                                Devenir vendeur
+                            </a>
+                            <a href="#">
+                                Accès vendeur
+                            </a>
+                        </div>
+                        <div class="nav__inner-foot">
+                            <a href="#" class="nav__inner-logo">
+                                <img src="./images/logo.svg" alt="">
+                            </a>
+                            <p>
+                                jedonnemonprix.ch est une application web éditée par Netvetic Sàrl.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end
+    =========================================== -->
+    <main class="main big">
+        <!-- signUp start
+    =========================================== -->
+        <section class="sign">
+            <div class="auto__container">
+                <div class="sign__inner">
+                    <div class="sign__inner-form">
+                        <h5>
+                            Créer un compte
+                        </h5>
+                        <div class="sign__inner-inputs" id="inputWrapper">
+                            <div class="input">
+                                <input type="text">
+                                <label for="">Prénom</label>
+                            </div>
+                            <div class="input">
+                                <input type="text">
+                                <label for="">
+                                    E-mail
+                                </label>
+                            </div>
+                            <div class="input">
+                                <input type="password">
+                                <label for="">
+                                    Mot de passe
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="button primary">
+                            Se connecter
+                        </button>
+                        <p class="sm">
+                            En créant un compte, vous acceptez nos <a href="#">conditions générales</a> et notre
+                            politique de <a href="#">confidentialité.</a>
+                        </p>
+                        <a href="#" class="sign__inner-form-link">
+                            J'ai déjà un compte
+                        </a>
+                    </div>
+                    <div class="sign__inner-col">
+                        <h6>
+                            <b>
+                                OU
+                            </b>
+                        </h6>
+                        <div class="sign__inner-buttons">
+                            <a href="#" class="button solid">
+                                <span>
+                                    <img src="./images/icons/google.svg" alt="">
+                                </span>
+                                Continuer avec Google
+                            </a>
+                            <a href="#" class="button solid">
+                                <span>
+                                    <img src="./images/icons/facebook.svg" alt="">
+                                </span>
+                                Continuer avec Facebook
+                            </a>
+                            <a href="#" class="button solid">
+                                <span class="sm">
+                                    <img src="./images/icons/apple.svg" alt="">
+                                </span>
+                                Continuer avec Apple
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- signUp end
+    =========================================== -->
+        <!-- footer start
+    =========================================== -->
+        <footer class="footer big">
+            <div class="auto__container">
+                <div class="footer__inner">
+                    <p>
+                        (c) jedonnemonprix.ch
+                    </p>
+                    <hr>
+                    <a href="#">
+                        Conditions générales
+                    </a>
+                    <hr>
+                    <a href="#">
+                        Protection des données
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end
+    =========================================== -->
+    </main>
+    <!-- Sprites
+    =========================================== -->
+    <!-- <svg>
+      <use xlink:href="#voice"></use>
+    </svg> -->
+    <svg style="display: none">
+        <symbol id="arrow-left" viewBox="0 0 22 16">
+            <g>
+                <path id="Path_146" data-name="Path 146"
+                    d="M1.293,11.293l7-7A1,1,0,1,1,9.707,5.707L4.414,11H22a1,1,0,0,1,0,2H4.414l5.293,5.293a1,1,0,1,1-1.414,1.414l-7-7a1,1,0,0,1,0-1.414Z"
+                    transform="translate(-1 -4)" stroke="currentColor" stroke-width="1" />
+            </g>
+        </symbol>
+        <symbol id="user" viewBox="0 0 21 21">
+            <g>
+                <path id="Path_15" data-name="Path 15"
+                    d="M17.071,12.929a9.962,9.962,0,0,0-3.8-2.384,5.781,5.781,0,1,0-6.542,0A10.016,10.016,0,0,0,0,20H1.562a8.437,8.437,0,0,1,16.875,0H20A9.935,9.935,0,0,0,17.071,12.929ZM10,10a4.219,4.219,0,1,1,4.219-4.219A4.224,4.224,0,0,1,10,10Z"
+                    transform="translate(0)" stroke="currentColor" stroke-width="1" />
+            </g>
+        </symbol>
+        <symbol id="arrow-diagonal" viewBox="0 0 12.022 12.022">
+            <g>
+                <path id="diagonal-arrow" d="M2.4,0V2.4h5.41L0,10.219l1.8,1.8L9.618,4.208v5.41h2.4V0Z"
+                    fill="currentColor" />
+            </g>
+        </symbol>
+        <symbol id="chevron-bottom" viewBox="0 0 20 9.336">
+            <g>
+                <path id="angle-small-right"
+                    d="M8.194,6.972,2.22.415a1.221,1.221,0,0,0-1.835,0A1.5,1.5,0,0,0,0,1.43,1.5,1.5,0,0,0,.385,2.444L6.372,8.986a1.528,1.528,0,0,1,0,2.028L.385,17.557a1.53,1.53,0,0,0-.007,2.021,1.222,1.222,0,0,0,1.842.007l5.974-6.557A4.587,4.587,0,0,0,8.194,6.972Z"
+                    transform="translate(20) rotate(90)" fill="currentColor" />
+            </g>
+        </symbol>
+    </svg>
+    <!-- js
+    =========================================== -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

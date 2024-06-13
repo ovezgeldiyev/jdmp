@@ -1,0 +1,203 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  display: none;
+  padding: 25px;
+  &.active {
+    display: flex;
+    animation: fadeIn 0.4s ease;
+  }
+  &__inner {
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    margin: auto;
+    padding: 70px 60px 80px;
+    box-shadow: 0px 3px 0px 0px #00000016;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    &-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        &::before {
+          background-color: $primary;
+        }
+        &::after {
+          background-color: $primary;
+        }
+      }
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background-color: $black;
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: 0.3s ease;
+      }
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background-color: $black;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition: 0.3s ease;
+      }
+    }
+    &-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 45px;
+      a {
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 600;
+        font-family: $inter;
+        color: $black;
+        margin-bottom: 10px;
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+      h6 {
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 600;
+        font-family: $inter;
+        color: $black;
+        margin-bottom: 14px;
+      }
+    }
+    &-foot {
+      padding-top: 50px;
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        color: #333333;
+      }
+    }
+    &-logo {
+      width: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 14px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+.nav2 {
+  &__inner {
+    display: flex;
+    align-items: center;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 35px;
+      &:last-child {
+        margin: 0;
+      }
+      a {
+        font-size: 16px;
+        line-height: 21px;
+        font-weight: 700;
+        color: $black;
+        padding: 10px;
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin nav-lg-xlg {
+  .nav {
+    &__inner {
+      padding: 60px 40px 80px;
+    }
+  }
+  .nav2 {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 75px);
+    z-index: 9;
+    background: rgba($color: #000000, $alpha: 0.4);
+    transform: translateX(-100%);
+    @include transition;
+    &.active {
+      @include transformReset;
+    }
+    &__inner {
+      flex-direction: column;
+      position: absolute;
+      justify-content: unset;
+      align-items: center;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      width: 100%;
+      max-width: 320px;
+      z-index: 1;
+      padding: 50px 20px 20px 20px;
+      height: 100%;
+      overflow-y: auto;
+      background: $white;
+      li {
+        margin: 0 0 20px 0;
+        a {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+// 540px
+@mixin nav-xsm-sm {
+  .nav {
+    &__inner {
+      padding: 60px 25px 80px;
+      border: 1px solid #e4e4e4;
+      &-close {
+        top: 18px;
+        right: 20px;
+      }
+    }
+  }
+  .nav2 {
+    top: 70px;
+    height: calc(100% - 70px);
+  }
+}
